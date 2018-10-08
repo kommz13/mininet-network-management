@@ -8,6 +8,7 @@ http://ieeexplore.ieee.org/document/7859348/
 
 import os
 import time
+import re
 import matplotlib.pyplot as plt
 from mininet.net import Mininet
 from mininet.node import Controller, OVSKernelSwitch, OVSKernelAP
@@ -28,6 +29,13 @@ def graphic():
 def apply_experiment(car,client,switch):
     
     #time.sleep(2)
+    runtime = 20
+    open('packetloss', 'w')
+    open('throughput', 'w')
+    open('jitter03', 'w')
+    open('jitter3client', 'w')
+    open('ping03', 'w')
+    open('ping3client', 'w')
     print "Applying first phase"
 
     ################################################################################ 
@@ -46,6 +54,31 @@ def apply_experiment(car,client,switch):
     #
     #               ***************** Insert code below *********************  
     #################################################################################
+    
+    os.system('ovs-ofctl mod-flows switch in_port=1,actions=output:4')
+    os.system('ovs-ofctl mod-flows switch in_port=4,actions=output:1')
+    os.system('ovs-ofctl mod-flows switch in_port=2,actions=drop')
+    os.system('ovs-ofctl mod-flows switch in_port=3,actions=drop')
+    os.system('ovs-ofctl del-flows eNodeB1')
+    os.system('ovs-ofctl del-flows eNodeB2')
+    os.system('ovs-ofctl del-flows rsu1')
+     
+    car[0].cmd('ip route add 200.0.10.2 via 200.0.10.50')
+    client.cmd('ip route add 200.0.10.100 via 200.0.10.150')
+     
+    startTime = time.time()
+    curTime = startTime
+    endTime = startTime + runtime
+    i = 0
+    while curTime < endTime:
+        if curTime - startTime >= i:
+            car[0].cmd('ifconfig bond0 | grep \"TX packets\" | awk -F\' \' \'{print $2,$4}\' >> %s' % 'packetloss')
+            car[0].cmd('ifconfig bond0 | grep \"bytes\" | awk -F\' \' \'{print $6}\' >> %s' % 'throughput')
+            car[0].cmd('ping -c 1 200.0.10.50 | grep \"icmp_seq=1\" | awk -F\' \' \'{print $7}\' >> %s' % 'ping03') 
+            car[3].cmd('ping -c 1 200.0.10.2 | grep \"icmp_seq=1\" | awk -F\' \' \'{print $7}\' >> %s' % 'ping3client') 
+            i += 0.2
+        curTime = time.time()
+    CLI(net)
 
     
 
@@ -77,8 +110,16 @@ def apply_experiment(car,client,switch):
     #
     #           ***************** Insert code below ********************* 
     #################################################################################
-    
-
+    os.system('ovs-ofctl mod-flows switch in_port=1,actions=drop')
+    os.system('ovs-ofctl mod-flows switch in_port=2,actions=output:4')
+    os.system('ovs-ofctl mod-flows switch in_port=4,actions=output:2,3')
+    os.system('ovs-ofctl mod-flows switch in_port=3,actions=output:4')
+    os.system('ovs-ofctl del-flows eNodeB1')
+    os.system('ovs-ofctl del-flows eNodeB2')
+    os.system('ovs-ofctl del-flows rsu1')  
+ 
+    car[0].cmd('ip route del 200.0.10.2 via 200.0.10.50')
+    client.cmd('ip route del 200.0.10.100 via 200.0.10.150')
     
     print "Moving nodes"
     car[0].moveNodeTo('190,100,0')
@@ -104,7 +145,14 @@ def apply_experiment(car,client,switch):
     #
     #           ***************** Insert code below ********************* 
     #################################################################################
-
+    os.system('ovs-ofctl mod-flows switch in_port=1,actions=drop')
+    os.system('ovs-ofctl mod-flows switch in_port=3,actions=drop')
+    os.system('ovs-ofctl mod-flows switch in_port=2,actions=output:4')
+    os.system('ovs-ofctl mod-flows switch in_port=4,actions=output:2')
+    os.system('ovs-ofctl del-flows eNodeB1')
+    os.system('ovs-ofctl del-flows eNodeB2')
+    os.system('ovs-ofctl del-flows rsu1')
+	
 
 
 def topology():
@@ -219,8 +267,8 @@ def topology():
     net.startGraph()
 
     # Uncomment and modify the two commands below to stream video using VLC 
-    #car[0].cmdPrint("vlc -vvv <file> --sout '#duplicate{dst=rtp{dst=<streaming_ip>,port=5004,mux=ts},dst=display}' :sout-keep &")
-    #client.cmdPrint("vlc rtp://@<streaming_ip>:5004 &")
+    car[0].cmdPrint("vlc -vvv bwcLow.mp4 --sout '#duplicate{dst=rtp{dst=<streaming_ip>,port=5004,mux=ts},dst=display}' :sout-keep &")
+    client.cmdPrint("vlc rtp://@<streaming_ip>:5004 &")
 
     car[0].moveNodeTo('95,100,0')
     car[1].moveNodeTo('80,100,0')
@@ -237,7 +285,7 @@ def topology():
     # graphic()
 
     # kills all the xterms that have been opened
-    os.system('pkill xterm')
+    #os.system('pkill xterm')
 
     print "*** Running CLI"
     CLI(net)
