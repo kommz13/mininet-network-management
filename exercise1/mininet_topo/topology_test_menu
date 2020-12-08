@@ -1,0 +1,15 @@
++===========================================================================================+
+|1)#ICMP BUSINESS<->BUSINESS    11)#TCP BUSINESS<->CUSTOMERS    21)#TCP CUSTOMERS<->INTERNET|         
+|2)#ICMP CUSTOMERS<->CUSTOMERS  12)#TCP BUSINESS<->SERVER       22)#TCP SERVER<->INTERNET   |
+|3)#ICMP BUSINESS<->CUSTOMERS   13)#TCP CUSTOMERS<->SERVER      23)# CUSTOMERS<->SERVER     |
+|4)#ICMP BUSINESS<->SERVER      14)#UDP BUSINESS<->BUSINESS     24)# BUSINESS<->BUSINESS    |
+|5)#ICMP CUSTOMERS<->SERVER     15)#UDP CUSTOMERS<->CUSTOMERS                               |
+|6)#HTTP BUSINESS<->INTERNET    16)#UDP BUSINESS<->CUSTOMERS                                |
+|7)#HTTP CUSTOMERS<->INTERNET   17)#UDP BUSINESS<->SERVER                                   |
+|8)#HTTP SERVER<->INTERNET      18)#UDP CUSTOMERS<->SERVER                                  |
+|9)#TCP BUSINESS<->BUSINESS     19)#ICMP BUSINESS<->INTERNET                                |   
+|10)#TCP CUSTOMERS<->CUSTOMERS  20)#TCP BUSINESS<->INTERNET                                 |
++-------------------------------------------------------------------------------------------+
+|   >Press the number of the test you want to examine (ex. 13 + ENTER )                     |
+|   >Type exit to close this menu and open the mininet-wifi command line                    |
++===========================================================================================+

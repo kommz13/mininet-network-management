@@ -1,0 +1,11 @@
++===============================================================================+
+|1)#BLOCK ICMP - SWITCH 1                       7)#BLOCK CUSTOMERS<->SERVER     |         
+|2)#BLOCK TCP BUSINESS<->INTERNET - SWITCH 1    8)#BLOCK BUSINESS<->BUSINESS    |
+|3)#BLOCK TCP CUSTOMERS<->INTERNET - SWITCH 2   9)                              |
+|4)#BLOCK TCP SERVER<->INTERNET - SWITCH 2      10)                             |
+|5)#BLOCK ICMP BUSINESS<->CUSTOMERS- SWITCH 2   11)                             |
+|6)#BLOCK UDP BUSINESS<->CUSTOMERS- SWITCH 2    12)                             |
++-------------------------------------------------------------------------------+
+|   >Press the "on" or "off" + the number of the flow to activate/diactivate    | 
+|   >Type "exit" to close the app "clear" to diactivate all flows               |
++===============================================================================+

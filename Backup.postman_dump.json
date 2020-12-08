@@ -1,0 +1,718 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"id": "160e5b58-4a09-4019-836f-38fe0ae9aa68",
+			"name": "Opendaylight",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"d1de83bd-1e7f-4273-95ab-aa650c295ec7",
+				"d65e9cc1-2f75-4e7d-a7ba-716c3e1ba219",
+				"c314735c-52c4-41d4-92da-c43977bce9d7",
+				"175d6469-0480-47ac-844d-7c8c4b20006a",
+				"71c58ad5-6c4b-4238-a922-5f0b64355750",
+				"e11bfe91-5653-4944-925c-e33fb71d7ce1",
+				"98983830-c946-4180-b3d3-e57efd115ed8",
+				"844c4ea9-2c18-4754-a5e0-abb92deb8262",
+				"34f1ffef-50af-4556-9b1d-27989e711fd1",
+				"d544bdfd-acc5-4048-85c4-b0d18b4d053e"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"folders": [],
+			"requests": [
+				{
+					"id": "175d6469-0480-47ac-844d-7c8c4b20006a",
+					"name": "Get flows operational of switch 1 (table 0) Copy",
+					"url": "http://127.0.0.1:8181/restconf/operational/opendaylight-inventory:nodes/node/openflow:1/table/0",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Accept",
+							"type": "text",
+							"value": "application/json"
+						},
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Content-Type",
+							"type": "text",
+							"value": "application/json"
+						},
+						{
+							"description": "",
+							"enabled": false,
+							"key": "device-username",
+							"type": "text",
+							"value": "admin"
+						},
+						{
+							"description": "",
+							"enabled": false,
+							"key": "device-password",
+							"type": "text",
+							"value": "admin"
+						}
+					],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"basic": [
+							{
+								"key": "password",
+								"value": "admin"
+							},
+							{
+								"key": "username",
+								"value": "admin"
+							}
+						],
+						"type": "basic"
+					},
+					"events": [],
+					"folder": null,
+					"currentHelper": "basicAuth",
+					"helperAttributes": {
+						"id": "basic",
+						"username": "admin",
+						"password": "admin"
+					},
+					"collectionId": "160e5b58-4a09-4019-836f-38fe0ae9aa68",
+					"headers": "Accept: application/json\nContent-Type: application/json\n//device-username: admin\n//device-password: admin\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "34f1ffef-50af-4556-9b1d-27989e711fd1",
+					"name": "Delele flow 1 of switch 1 (table 0)",
+					"url": "http://127.0.0.1:8181/restconf/config/opendaylight-inventory:nodes/node/openflow:1/table/0/flow/1",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Accept",
+							"type": "text",
+							"value": "application/json"
+						},
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Content-Type",
+							"type": "text",
+							"value": "application/json"
+						},
+						{
+							"description": "",
+							"enabled": false,
+							"key": "device-username",
+							"type": "text",
+							"value": "admin"
+						},
+						{
+							"description": "",
+							"enabled": false,
+							"key": "device-password",
+							"type": "text",
+							"value": "admin"
+						}
+					],
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"basic": [
+							{
+								"key": "password",
+								"value": "admin"
+							},
+							{
+								"key": "username",
+								"value": "admin"
+							}
+						],
+						"type": "basic"
+					},
+					"events": [],
+					"folder": null,
+					"currentHelper": "basicAuth",
+					"helperAttributes": {
+						"id": "basic",
+						"username": "admin",
+						"password": "admin"
+					},
+					"collectionId": "160e5b58-4a09-4019-836f-38fe0ae9aa68",
+					"headers": "Accept: application/json\nContent-Type: application/json\n//device-username: admin\n//device-password: admin\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "71c58ad5-6c4b-4238-a922-5f0b64355750",
+					"name": "Get flow detail for 1 of switch 1 (table 0)",
+					"url": "http://127.0.0.1:8181/restconf/config/opendaylight-inventory:nodes/node/openflow:1/table/0/flow/1",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Accept",
+							"type": "text",
+							"value": "application/json"
+						},
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Content-Type",
+							"type": "text",
+							"value": "application/json"
+						},
+						{
+							"description": "",
+							"enabled": false,
+							"key": "device-username",
+							"type": "text",
+							"value": "admin"
+						},
+						{
+							"description": "",
+							"enabled": false,
+							"key": "device-password",
+							"type": "text",
+							"value": "admin"
+						}
+					],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"basic": [
+							{
+								"key": "password",
+								"value": "admin"
+							},
+							{
+								"key": "username",
+								"value": "admin"
+							}
+						],
+						"type": "basic"
+					},
+					"events": [],
+					"folder": null,
+					"currentHelper": "basicAuth",
+					"helperAttributes": {
+						"id": "basic",
+						"username": "admin",
+						"password": "admin"
+					},
+					"collectionId": "160e5b58-4a09-4019-836f-38fe0ae9aa68",
+					"headers": "Accept: application/json\nContent-Type: application/json\n//device-username: admin\n//device-password: admin\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "844c4ea9-2c18-4754-a5e0-abb92deb8262",
+					"name": "Translation towards 10.0.1.2 Copy",
+					"url": "http://127.0.0.1:8181/restconf/config/opendaylight-inventory:nodes/node/openflow:1/table/0/flow/2",
+					"description": "",
+					"data": [],
+					"dataOptions": null,
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Accept",
+							"type": "text",
+							"value": "application/json"
+						},
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Content-Type",
+							"type": "text",
+							"value": "application/json"
+						},
+						{
+							"description": "",
+							"enabled": false,
+							"key": "device-username",
+							"type": "text",
+							"value": "admin"
+						},
+						{
+							"description": "",
+							"enabled": false,
+							"key": "device-password",
+							"type": "text",
+							"value": "admin"
+						}
+					],
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"basic": [
+							{
+								"key": "password",
+								"value": "admin"
+							},
+							{
+								"key": "username",
+								"value": "admin"
+							}
+						],
+						"type": "basic"
+					},
+					"events": [],
+					"folder": null,
+					"currentHelper": "basicAuth",
+					"helperAttributes": {
+						"id": "basic",
+						"username": "admin",
+						"password": "admin"
+					},
+					"collectionId": "160e5b58-4a09-4019-836f-38fe0ae9aa68",
+					"rawModeData": "{\n    \"flow\": {\n        \"id\": \"2\",\n        \"hard-timeout\": 0,\n        \"idle-timeout\": 0,\n        \"match\": {\n            \"ethernet-match\": {               \n                \"ethernet-type\": {\n                    \"type\": 2048\n                }\n            },\n            \"ipv4-source\": \"10.0.1.2/32\"\n        },\n        \"cookie\": 0,\n        \"instructions\": {\n            \"instruction\": [\n                {\n                    \"order\": 0,\n                    \"apply-actions\": {\n                        \"action\": [\n                            {\n                                \"order\": 0,\n                                \"set-dl-src-action\": {\n                                    \"address\": \"00:00:00:00:00:00\"\n                                }\n                            },\n                            {\n                                \"order\": 1,\n                                \"set-nw-src-action\": {\n                                    \"ipv4-address\": \"10.0.1.1/32\"\n                                }\n                            },\n                            {\n                                \"order\": 2,\n                                \"output-action\": {\n                                    \"output-node-connector\": \"NORMAL\"\n                                }\n                            }\n                        ]\n                    }\n                }\n            ]\n        },\n        \"priority\": 1000,\n        \"table_id\": 0,\n        \"flow-name\": \"name_2\"\n    }\n}",
+					"headers": "Accept: application/json\nContent-Type: application/json\n//device-username: admin\n//device-password: admin\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "98983830-c946-4180-b3d3-e57efd115ed8",
+					"name": "Translation towards 10.0.1.2",
+					"url": "http://127.0.0.1:8181/restconf/config/opendaylight-inventory:nodes/node/openflow:1/table/0/flow/1",
+					"description": "",
+					"data": [],
+					"dataOptions": null,
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Accept",
+							"type": "text",
+							"value": "application/json"
+						},
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Content-Type",
+							"type": "text",
+							"value": "application/json"
+						},
+						{
+							"description": "",
+							"enabled": false,
+							"key": "device-username",
+							"type": "text",
+							"value": "admin"
+						},
+						{
+							"description": "",
+							"enabled": false,
+							"key": "device-password",
+							"type": "text",
+							"value": "admin"
+						}
+					],
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"basic": [
+							{
+								"key": "password",
+								"value": "admin"
+							},
+							{
+								"key": "username",
+								"value": "admin"
+							}
+						],
+						"type": "basic"
+					},
+					"events": [],
+					"folder": null,
+					"currentHelper": "basicAuth",
+					"helperAttributes": {
+						"id": "basic",
+						"username": "admin",
+						"password": "admin"
+					},
+					"collectionId": "160e5b58-4a09-4019-836f-38fe0ae9aa68",
+					"rawModeData": "{\n    \"flow\": {\n        \"id\": \"1\",\n        \"hard-timeout\": 0,\n        \"idle-timeout\": 0,\n        \"match\": {           \n            \"ethernet-match\": {\n                \"ethernet-type\": {\n                    \"type\": 2048\n                }\n            },\n            \"ip-match\": {\n                \"ip-protocol\": 6\n            },\n            \"ipv4-destination\": \"10.0.1.1/32\"\n        },\n        \"cookie\": 0,\n        \"instructions\": {\n            \"instruction\": [\n                {\n                    \"order\": 0,\n                    \"apply-actions\": {\n                        \"action\": [\n                            {\n                                \"order\": \"0\",\n                                \"set-dl-dst-action\": {\n                                    \"address\": \"00:00:00:00:00:12\"\n                                }\n                            },\n                            {\n                                \"order\": 1,\n                                \"set-nw-dst-action\": {\n                                    \"ipv4-address\": \"10.0.1.2/32\"\n                                }\n                            },\n                            {\n                                \"order\": 2,\n                                \"output-action\": {\n                                    \"output-node-connector\": \"2\"\n                                }\n                            }\n                        ]\n                    }\n                }\n            ]\n        },\n        \"priority\": 1000,\n        \"table_id\": 0,\n        \"flow-name\": \"name_1\"\n    }\n}",
+					"headers": "Accept: application/json\nContent-Type: application/json\n//device-username: admin\n//device-password: admin\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "c314735c-52c4-41d4-92da-c43977bce9d7",
+					"name": "Get flows config of switch 1 (table 0)",
+					"url": "http://127.0.0.1:8181/restconf/config/opendaylight-inventory:nodes/node/openflow:1/table/0",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Accept",
+							"type": "text",
+							"value": "application/json"
+						},
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Content-Type",
+							"type": "text",
+							"value": "application/json"
+						},
+						{
+							"description": "",
+							"enabled": false,
+							"key": "device-username",
+							"type": "text",
+							"value": "admin"
+						},
+						{
+							"description": "",
+							"enabled": false,
+							"key": "device-password",
+							"type": "text",
+							"value": "admin"
+						}
+					],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"basic": [
+							{
+								"key": "password",
+								"value": "admin"
+							},
+							{
+								"key": "username",
+								"value": "admin"
+							}
+						],
+						"type": "basic"
+					},
+					"events": [],
+					"folder": null,
+					"currentHelper": "basicAuth",
+					"helperAttributes": {
+						"id": "basic",
+						"username": "admin",
+						"password": "admin"
+					},
+					"collectionId": "160e5b58-4a09-4019-836f-38fe0ae9aa68",
+					"headers": "Accept: application/json\nContent-Type: application/json\n//device-username: admin\n//device-password: admin\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "d1de83bd-1e7f-4273-95ab-aa650c295ec7",
+					"name": "Get topology",
+					"url": "http://127.0.0.1:8181/restconf/operational/network-topology:network-topology",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [
+						{
+							"key": "Accept",
+							"value": "application/json",
+							"description": "",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "device-username",
+							"value": "admin",
+							"description": "",
+							"type": "text",
+							"enabled": false
+						},
+						{
+							"key": "device-password",
+							"value": "admin",
+							"description": "",
+							"type": "text",
+							"enabled": false
+						}
+					],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "basic",
+						"basic": [
+							{
+								"key": "password",
+								"value": "admin"
+							},
+							{
+								"key": "username",
+								"value": "admin"
+							}
+						]
+					},
+					"events": [],
+					"folder": null,
+					"currentHelper": "basicAuth",
+					"helperAttributes": {
+						"id": "basic",
+						"username": "admin",
+						"password": "admin"
+					},
+					"collectionId": "160e5b58-4a09-4019-836f-38fe0ae9aa68",
+					"headers": "Accept: application/json\nContent-Type: application/json\n//device-username: admin\n//device-password: admin\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "d544bdfd-acc5-4048-85c4-b0d18b4d053e",
+					"name": "Delele flow 2 of switch 1 (table 0) Copy",
+					"url": "http://127.0.0.1:8181/restconf/config/opendaylight-inventory:nodes/node/openflow:1/table/0/flow/1",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Accept",
+							"type": "text",
+							"value": "application/json"
+						},
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Content-Type",
+							"type": "text",
+							"value": "application/json"
+						},
+						{
+							"description": "",
+							"enabled": false,
+							"key": "device-username",
+							"type": "text",
+							"value": "admin"
+						},
+						{
+							"description": "",
+							"enabled": false,
+							"key": "device-password",
+							"type": "text",
+							"value": "admin"
+						}
+					],
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"basic": [
+							{
+								"key": "password",
+								"value": "admin"
+							},
+							{
+								"key": "username",
+								"value": "admin"
+							}
+						],
+						"type": "basic"
+					},
+					"events": [],
+					"folder": null,
+					"currentHelper": "basicAuth",
+					"helperAttributes": {
+						"id": "basic",
+						"username": "admin",
+						"password": "admin"
+					},
+					"collectionId": "160e5b58-4a09-4019-836f-38fe0ae9aa68",
+					"headers": "Accept: application/json\nContent-Type: application/json\n//device-username: admin\n//device-password: admin\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "d65e9cc1-2f75-4e7d-a7ba-716c3e1ba219",
+					"name": "Get inventory",
+					"url": "http://127.0.0.1:8181/restconf/config/opendaylight-inventory:nodes/",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Accept",
+							"type": "text",
+							"value": "application/json"
+						},
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Content-Type",
+							"type": "text",
+							"value": "application/json"
+						},
+						{
+							"description": "",
+							"enabled": false,
+							"key": "device-username",
+							"type": "text",
+							"value": "admin"
+						},
+						{
+							"description": "",
+							"enabled": false,
+							"key": "device-password",
+							"type": "text",
+							"value": "admin"
+						}
+					],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"basic": [
+							{
+								"key": "password",
+								"value": "admin"
+							},
+							{
+								"key": "username",
+								"value": "admin"
+							}
+						],
+						"type": "basic"
+					},
+					"events": [],
+					"folder": null,
+					"currentHelper": "basicAuth",
+					"helperAttributes": {
+						"id": "basic",
+						"username": "admin",
+						"password": "admin"
+					},
+					"collectionId": "160e5b58-4a09-4019-836f-38fe0ae9aa68",
+					"headers": "Accept: application/json\nContent-Type: application/json\n//device-username: admin\n//device-password: admin\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "e11bfe91-5653-4944-925c-e33fb71d7ce1",
+					"name": "Add flow",
+					"url": "http://127.0.0.1:8181/restconf/config/opendaylight-inventory:nodes/node/openflow:1/table/0/flow/1",
+					"description": "",
+					"data": [],
+					"dataOptions": null,
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Accept",
+							"type": "text",
+							"value": "application/json"
+						},
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Content-Type",
+							"type": "text",
+							"value": "application/json"
+						},
+						{
+							"description": "",
+							"enabled": false,
+							"key": "device-username",
+							"type": "text",
+							"value": "admin"
+						},
+						{
+							"description": "",
+							"enabled": false,
+							"key": "device-password",
+							"type": "text",
+							"value": "admin"
+						}
+					],
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"basic": [
+							{
+								"key": "password",
+								"value": "admin"
+							},
+							{
+								"key": "username",
+								"value": "admin"
+							}
+						],
+						"type": "basic"
+					},
+					"events": [],
+					"folder": null,
+					"currentHelper": "basicAuth",
+					"helperAttributes": {
+						"id": "basic",
+						"username": "admin",
+						"password": "admin"
+					},
+					"collectionId": "160e5b58-4a09-4019-836f-38fe0ae9aa68",
+					"rawModeData": "{\n    \"flow\": {\n        \"id\": \"1\",\n        \"hard-timeout\": 0,\n        \"idle-timeout\": 0,\n        \"match\": {\n            \"ethernet-match\": {\n                \"ethernet-type\": {\n                    \"type\": 2048\n                }\n            },\n            \"ip-match\": {\n                \"ip-protocol\": 1\n            }\n        },\n        \"cookie\": 0,\n        \"instructions\": {\n            \"instruction\": [\n                {\n                    \"order\": 0,\n                    \"apply-actions\": {\n                        \"action\": [\n                            {\n                                \"order\": 0,\n                                \"drop-action\": {}\n                            }\n                        ]\n                    }\n                }\n            ]\n        },\n        \"priority\": 1000,\n        \"table_id\": 0,\n        \"flow-name\": \"name_1\"\n    }\n}",
+					"headers": "Accept: application/json\nContent-Type: application/json\n//device-username: admin\n//device-password: admin\n",
+					"pathVariables": {}
+				}
+			]
+		}
+	],
+	"environments": [
+		{
+			"id": "b54b9bef-77fa-4533-aa4a-bf3b692ca604",
+			"name": "opendaylight",
+			"values": [
+				{
+					"key": "device-username",
+					"value": "admin",
+					"enabled": true
+				},
+				{
+					"key": "device-password",
+					"value": "admin",
+					"enabled": true
+				}
+			]
+		},
+		{
+			"id": "d0b8af70-a7df-483d-bc6d-b992039c1510",
+			"name": "My Workspace - globals",
+			"values": []
+		}
+	],
+	"headerPresets": [],
+	"globals": []
+}
